@@ -113,11 +113,11 @@ public class Lgdpvs01 {
         wfRequestId = dfhcommarea.getCaRequestId().substring(3, 4);
         wfPolicyNum = String.valueOf(dfhcommarea.getCaPolicyRequest().getCaPolicyNum());
         wfCustomerNum = String.valueOf(dfhcommarea.getCaCustomerNum());
-        log.warn(wfRequestId+""+wfPolicyNum+""+wfCustomerNum);
+        log.warn(wfRequestId + "" + wfPolicyNum + "" + wfCustomerNum);
         // String PolicyKey = wfRequestId + wfPolicyNum + wfCustomerNum;
         // ksdsPolyKey ke= new ksdsPolyKey(wfRequestId,wfCustomerNum,wfPolicyNum);
         try {
-            ksdspoly.deleteByKsdsPolyKey(wfRequestId , wfCustomerNum, wfPolicyNum );
+            ksdspoly.deleteByKsdsPolyKey(wfRequestId, wfCustomerNum, wfPolicyNum);
         } catch (Exception e) {
             log.error("No Record Found", e);
             wsResp = 1;
@@ -128,7 +128,7 @@ public class Lgdpvs01 {
             writeErrorMessage();
 
         }
-        return new ResponseEntity<>(dfhcommarea,HttpStatus.OK);
+        return new ResponseEntity<>(dfhcommarea, HttpStatus.OK);
     }
 
     public void writeErrorMessage() {

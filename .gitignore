@@ -1,3 +1,8 @@
 /.vscode
 /log
-/target
+*.class
+*.log
+*.lst
+target/maven-archiver/pom.properties
+target/classes/application.properties
+target/formatter-maven-cache.properties
